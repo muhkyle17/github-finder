@@ -15,6 +15,7 @@ function User() {
   useEffect(() => {
     getUser(params.login)
     getUserRepos(params.login)
+    // eslint-disable-next-line react-books/exhaustive-deps
   }, [])
 
   const {
