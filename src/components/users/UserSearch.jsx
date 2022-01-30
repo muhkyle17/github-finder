@@ -9,20 +9,17 @@ function UserSearch() {
   const { users, dispatch } = useContext(GithubContext)
   const { setAlert } = useContext(AlertContext)
 
-  const handleChange = (e) => {
-    setText(e.target.value)
-  }
+  const handleChange = (e) => setText(e.target.value)
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    console.log(text)
 
     if (text === '') {
       setAlert('Please enter something', 'error')
     } else {
       dispatch({ type: 'SET_LOADING' })
       const users = await searchUsers(text)
-      dispatchEvent({ type: 'GET_USERS', payload: users })
+      dispatch({ type: 'GET_USERS', payload: users })
 
       setText('')
     }
