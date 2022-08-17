@@ -6,6 +6,7 @@ function Home() {
     <>
       <UserSearch />
       <UserResults />
+      <p>Hi</p>
     </>
   )
 }
