@@ -6,7 +6,6 @@ function Home() {
     <>
       <UserSearch />
       <UserResults />
-      <p>Configuration part 2</p>
     </>
   )
 }
